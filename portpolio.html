@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dheeraj Portfolio</title>
+  
+  
+  <!--  Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2"></script>
+    <!--  Tailwind CSS file -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body x-data="{ open: false }" class="bg-gray-100 font-sans">
+
+  <!-- Navigation -->
+  <nav class="bg-gray-800 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-2xl font-bold">N S DHEERAJ</div>
+      <!-- navigation links -->
+      <div class="space-x-4">
+        <a href="#" class="hover:text-indigo-500 hover:uppercase hover:underline">Home</a>
+        <a href="#about" class="hover:text-gray-300 hover:uppercase hover:underline">About</a>
+        <a href="#skills" class="hover:text-gray-300 hover:uppercase hover:underline">Skills</a>
+        <a href="#experience" class="hover:text-gray-300 hover:uppercase hover:underline">Experience</a>
+        <a href="#projects" class="hover:text-gray-300 hover:uppercase hover:underline">Projects</a>
+        <a href="#contact" class="hover:text-gray-300 hover:uppercase hover:underline-offset-4">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-indigo-800 text-white py-80">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Hello, I'm Your N S DHEERAJ</h1>
+      <p class="mt-4 text-lg">A passionate  front-end developer creating awesome websites and applications.</p>
+      <!-- call-to-action button-->
+      <button class="mt-8 bg-white text-indigo-800 py-2 px-6 rounded-full hover:bg-indigo-700 hover:text-white"> <b>  <a href="#contact">Contact Me</a></b></button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-700 leading-relaxed">
+        I am a dedicated and creative developer with a passion for crafting beautiful and functional websites.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-100 py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 flex">
+       <div x-data="{ open: false }">
+          <div @click="open = !open" class="cursor-pointer bg-white p-4 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-2">Programming Languages</h3>
+            <p  class="text-gray-700">JavaScript, Python, Java,C,__</p>
+            <h3 class="text-xl font-bold mb-2">Frameworks</h3>
+            <p class="text-gray-700">   Tailwind CSS, BOOTSTRAP</p>
+            <h3 class="text-xl font-bold mb-2">Libraries</h3>
+            <p class="text-gray-700">React,vue3.js</p>
+          </div>
+          <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+            Frameworks, Libraries, etc.
+          </div>
+        </div>
+        <div x-data="{ open: false }">
+            <div @click="open = !open" class="cursor-pointer bg-white p-4 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">non-technical skills</h3>
+              <p  class="text-gray-700">Communication skills, problem-solving,Teamwork and collaboration,Adaptability,Leadership etc.</p>
+              <h3 class="text-xl font-bold mb-2">other achivements</h3>
+              <p class="text-gray-700"> cleared UPSC NDA/NA exam (2020-21)</p>
+            </div>
+            <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+                <p>for nda/na exam there is a ssb interview, for which aspirants needed to have 15 OLQ's(officer like qualities).</p>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Experience</h2>
+      <div class="mt-4">
+        <div class="mt-4">
+            <h3 class="text-xl font-bold mb-2"> fullstack web development intern at DOTch Endeviours PVT.LTD  </h3>
+            <p class="text-gray-700">Worked on cloning projects, implemented innovative solutions, etc.</p>
+        </div>
+        <a href="https://drive.google.com/file/d/1DpYP4Sgteoo0qfCa2I5PK5N80wzsXUhqY/view?usp=drivesdk"><i>CERTIFICATE</i> </a>
+    
+      <div class="mt-4">
+        <h3 class="text-xl font-bold mb-2">software tester (intern) at COMSOFT TECHNOLOGIES LIMITED </h3>
+        <p class="text-gray-700">Worked on speech to text converter project,its an ML based project where i served during testing phase and reported key errors in the software and along with team implemented innovative solutions to over come it.</p>
+      </div><br>
+      <div class="mt-4">
+        <h3 class="text-xl font-bold mb-2"> web development intern at VAULT OF CODES</h3>
+        <p class="text-gray-700">Worked on various  projects, and implemented innovative solutions, etc.</p>
+      </div><br>
+      <h3 class="text-xl font-bold mb-2">development intern at DOTch Endeviours PVT.LTD </h3>
+      <p class="text-gray-700">Worked on cloning projects, implemented innovative solutions, etc.</p>
+    </div>
+     
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="bg-gray-100 py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <div x-data="{ open: false }">
+            <div @click="open = !open" class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Mangalore's Best Phones Landing Page Project
+            </h3>
+              <p class="text-gray-700">
+
+              <b> Description:</b>
+              Designed and developed an engaging landing page showcasing the best phones available in Mangalore, . The page combines a visually appealing layout with the functionality.<br>
+               <b> Technologies:</b>
+               HTML,Tailwind CSS for efficient styling and responsiveness.<br>
+               <b> Key Achievements:</b>
+               Visually appealing design to captivate users.
+
+                Responsive design for a user-friendly experience.
+               </p> <br>
+            </div>
+            <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+              Technologies used, GitHub repository, live demo,  VS code etc.
+            </div>
+          </div>
+       
+          <div x-data="{ open: false }">
+          <div @click="open = !open" class="bg-white p-6 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold mb-2">1 Netflix Website Cloning Project</h3>
+            <p class="text-gray-700">
+
+                <b>Description:</b>
+                Successfully replicated the Netflix website, showcasing proficiency in HTML, CSS, and JavaScript. Implemented responsive design, user authentication, and dynamic content display to recreate the user interface and functionality of the popular streaming platform.
+                <br>
+               <b> Technologies:</b>
+                
+                HTML, CSS, JavaScript for frontend. <br>
+            <b>Key Achievements:</b>
+                
+                Responsive design for various screen sizes.
+                User authentication and personalized content display.</p> <br>
+          </div>
+          <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+            Technologies used, GitHub repository, live demo, VS code  etc.
+          </div>
+        </div>
+       
+        <div x-data="{ open: false }">
+            <div @click="open = !open" class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">SpaceX Website Cloning Project</h3>
+              <p class="text-gray-700">
+
+              <b>  Description:</b>
+                Accurately cloned the SpaceX website, demonstrating expertise in HTML, CSS, and JavaScript. Ensured attention to detail in replicating the layout, interactive elements, and information presentation of the official SpaceX site.
+                <br>
+              <b> Technologies:</b> 
+                
+                HTML, CSS, JavaScript for frontend. <br>
+                <b>Key Achievements:</b>
+                
+                Mimicked the layout and design of the SpaceX website.
+                Implemented interactive elements and real-time updates.</p> <br>
+            </div>
+            <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+              Technologies used, GitHub repository, live demo,  VS code  etc.
+            </div>
+          </div>
+          
+          <div x-data="{ open: false }">
+            <div @click="open = !open" class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Amazon Website Cloning Project</h3>
+              <p class="text-gray-700">
+
+              <b> Description:</b>
+                Successfully recreated the Amazon website, showcasing advanced skills in HTML, CSS, and JavaScript. Implemented a responsive and intuitive user interface, incorporating key features such as product listings, user authentication, and a seamless shopping cart experience.
+                <br>
+               <b> Technologies:</b>
+                
+                HTML, CSS, JavaScript for frontend. <br>
+               <b> Key Achievements:</b>
+                
+                Responsive design for a user-friendly experience.
+                Dynamic product listings and shopping cart functionality..</p> <br>
+            </div>
+            <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+             
+              Technologies used, GitHub repository, live demo,  VS code  etc.
+            </div>
+          </div>
+          
+          <div x-data="{ open: false }">
+            <div @click="open = !open" class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Flipkart Website Cloning Project</h3>
+              <p class="text-gray-700">
+
+              <b>  Description:</b>
+                Accurately cloned the Flipkart website, demonstrating proficiency in HTML, CSS, and JavaScript. Replicated the dynamic and feature-rich nature of the official Flipkart site, including product displays, user authentication, and a smooth checkout process.
+                <br>
+                <b>Technologies:</b>
+                
+                HTML, CSS, JavaScript for  <br>
+               <b>Key Achievements:</b> 
+                
+                Replicated the layout and interactive elements of Flipkart.
+                Implemented seamless user authentication and checkout features.</p> <br>
+            </div>
+            <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+        
+              Technologies used, GitHub repository, live demo,  VS code  etc.
+            </div>
+          </div>
+    
+       
+          <div x-data="{ open: false }">
+            <div @click="open = !open" class="bg-white p-6 rounded-lg shadow-md">
+              <h3 class="text-xl font-bold mb-2">Blood Bank Management System Project</h3>
+              <p class="text-gray-700">
+
+                <b>Description:</b>
+                Developed a Blood Bank Management System using HTML, tailwind CSS, JavaScript, and SQL. Streamlined donor registration, inventory tracking, and donation scheduling. Ensured secure access and efficient data management through a user-friendly interface.
+                <br>
+                <b>Technologies:</b>
+                
+                HTML, CSS, JavaScript for frontend.
+                SQL for backend  <br>
+                <b>Impact:</b>
+                Enhanced blood bank operations by automating processes, improving donor engagement, and facilitating real-time inventory monitoring..</p>
+            </div>
+            <div x-show="open" @click.away="open = false" class="mt-2 text-gray-700">
+          
+              Technologies used, GitHub repository, live demo,  VS code etc.
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4">Contact</h2>
+      <p class="text-gray-700 mb-8">Let's connect! Feel free to reach out to me.<br>
+
+        phone:9380979148<br>
+        GitHub: <a href="http://github.com/Dheerajnaik04"   class="hover:text-blue-700">Dheerajnaik04</a>  <br>
+        linkdin: <a href="https://www.linkedin.com/in/n-s-dheeraj-b10913229" class="hover:text-blue-600">N S dheeraj</a><br>
+        GMAIL: <a href="www.dheerajnaik1999@gmail.com">dheerajnaik1999@gmail</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 DJ Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
